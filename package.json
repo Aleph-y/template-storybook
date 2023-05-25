@@ -25,9 +25,10 @@
   "type": "module",
   "scripts": {
     "dev": "storybook dev -p 6006",
-    "build": "storybook build -o dist",
+    "build": "npm run clean && storybook build -o dist",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "clean": "rimraf dist/"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -52,6 +53,7 @@
     "eslint-plugin-react-refresh": "^0.3.4",
     "eslint-plugin-storybook": "^0.6.12",
     "prop-types": "^15.8.1",
+    "rimraf": "^5.0.1",
     "sass": "^1.62.1",
     "storybook": "^7.0.17",
     "typescript": "^5.0.2",
