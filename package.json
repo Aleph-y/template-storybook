@@ -6,7 +6,7 @@
   "main": "dist/main.js",
   "homepage": "https://gitlab.com/yalephy",
   "repository": {
-    "url": "https://gitlab.com/siddharthaph/storybook-template",
+    "url": "https://github.com/Aleph-y/template-storybook",
     "type": "git"
   },
   "release": {
