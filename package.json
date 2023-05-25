@@ -2,8 +2,8 @@
   "name": "aleph-storybook-template",
   "private": false,
   "license": "MIT",
-  "typings": "dist/main.d.ts",
-  "main": "dist/main.js",
+  "typings": "dist/index.d.ts",
+  "main": "dist/index.js",
   "homepage": "https://gitlab.com/yalephy",
   "repository": {
     "url": "https://github.com/Aleph-y/template-storybook",
@@ -19,20 +19,21 @@
     "src"
   ],
   "peerDependencies": {
-    "react": ">=18.2.0"
+    "react": ">=18.2.0",
+    "sass": "^1.62.1"
   },
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "storybook dev -p 6006",
-    "build": "npm run clean && tsc && npm run sass",
+    "build": "npm run clean && tsc && npm run copy-assets",
     "build-storybook": "storybook build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "clean": "rimraf dist/",
-    "sass": "sass --style=compressed src/:dist/"
+    "copy-assets": "copyfiles -u 1 src/**/*.scss dist/"
   },
   "dependencies": {
-    "react": "^18.2.0",
+    "react": ">=18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
@@ -49,6 +50,7 @@
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
     "@vitejs/plugin-react": "^4.0.0",
+    "copyfiles": "^2.4.1",
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
