@@ -1,11 +1,31 @@
 {
-  "name": "storybook-template",
-  "private": true,
+  "name": "aleph-storybook-template",
+  "private": false,
+  "license": "MIT",
+  "typings": "dist/main.d.ts",
+  "main": "dist/main.js",
+  "homepage": "https://gitlab.com/yalephy",
+  "repository": {
+    "url": "https://gitlab.com/siddharthaph/storybook-template",
+    "type": "git"
+  },
+  "release": {
+    "branches": [
+      "master"
+    ]
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "peerDependencies": {
+    "react": ">=18.2.0"
+  },
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "storybook dev -p 6006",
-    "build": "storybook build",
+    "build": "storybook build -o dist",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },

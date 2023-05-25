@@ -1,1 +1,1 @@
-console.log('starting');
+export * from './components/Button';
